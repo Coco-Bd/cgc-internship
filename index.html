@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Internship Report — Bachelor 2</title>
+  <meta name="description" content="Internship Report — Bachelor 2, Cyber Guardians Challenge (CGC)" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Primary">
+      <a class="brand" href="#hero" aria-label="Back to top">Internship Report — B2</a>
+      <button id="themeToggle" class="btn ghost" aria-pressed="false" aria-label="Toggle dark mode">🌓</button>
+      <ul class="nav-list">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#missions-role">Missions &amp; Role</a></li>
+        <li><a href="#tools-methods">Tools &amp; Methods</a></li>
+        <li><a href="#responsibilities">Responsibilities &amp; Collaboration</a></li>
+        <li><a href="#team">Team &amp; Communication</a></li>
+        <li><a href="#curiosity">Curiosity &amp; Autonomy</a></li>
+        <li><a href="#assessment">Personal Assessment</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+      </ul>
+      <button id="printBtn" class="btn">Print / Export PDF</button>
+    </nav>
+  </header>
+
+  <main id="hero">
+    <section class="hero container section">
+      <h1>Internship Report — Bachelor 2</h1>
+      <p class="subtitle">Cyber Guardians Challenge (CGC) — Internship started <strong>August 11, 2025</strong> — Ongoing (<span aria-label="about ten days">≈10 days</span>)</p>
+      <div class="badges" role="list">
+        <span class="badge" role="listitem">Internship</span>
+        <span class="badge" role="listitem">DNS &amp; Email Infrastructure</span>
+        <span class="badge" role="listitem">Cost Analysis</span>
+        <span class="badge" role="listitem">Professional Communication</span>
+      </div>
+      <p class="lead">Building a reliable, secure email infrastructure and documenting decisions for CGC.</p>
+    </section>
+
+    <section id="introduction" class="container section card">
+      <h2>Introduction</h2>
+      <p><strong>Company:</strong> Cyber Guardians Challenge (CGC)</p>
+      <p><strong>Location:</strong> Toulouse, France</p>
+      <p><strong>Sector:</strong> Cybersecurity / IT Services (association creating cybersecurity events such as Capture the Flag competitions, workshops, and training)</p>
+      <p><strong>Duration:</strong> August 11, 2025 — <em>Ongoing</em></p>
+      <p><strong>Context &amp; Objectives:</strong> Open a professional communication channel for CGC by selecting an appropriate email provider, hardening deliverability, and creating core mailboxes under the company domain. Ensure choices are justified through a structured, budget-aware analysis.</p>
+    </section>
+
+    <section id="company" class="container section card">
+      <h2>Company Presentation (CGC &amp; its market)</h2>
+      <ul>
+        <li><strong>What CGC does:</strong> community and education-driven cybersecurity association; events, CTFs, workshops, awareness.</li>
+        <li><strong>Market &amp; targets:</strong> students, enthusiasts, SMEs/partners, event participants.</li>
+        <li><strong>Value proposition:</strong> accessible, practical security learning and a credible professional image.</li>
+      </ul>
+    </section>
+
+    <section id="missions-role" class="container section card">
+      <h2>Missions &amp; Role</h2>
+      <p><strong>Role:</strong> IT Intern focused on professional email infrastructure.</p>
+      <ul class="checklist">
+        <li>Provider benchmarking (Google Workspace, Zoho Mail, Self-hosted Mailcow)</li>
+        <li>Cost/feature comparison and decision criteria</li>
+        <li>Proposal document with pros/cons and deployment plan</li>
+        <li>DNS configuration for deliverability &amp; anti-spoofing: MX, SPF, DKIM, DMARC</li>
+        <li>Creation of 3 professional mailboxes under the CGC domain:
+          <code>leo.brevieres@cyberguardianchallenge.fr</code>,
+          <code>contact@cyberguardianchallenge.fr</code>,
+          <code>relation.entreprise@cyberguardianchallenge.fr</code>
+        </li>
+      </ul>
+      <p class="note"><strong>Scope (first ≈10 days):</strong> benchmarking, decision draft, DNS plan &amp; records, and initial mailbox creation.</p>
+      <p><strong>Deliverables:</strong> Comparative proposal (PDF), implementation steps, DNS changes summary.</p>
+    </section>
+
+    <section id="tools-methods" class="container section card">
+      <h2>Tools &amp; Methods (technical specialization)</h2>
+      <ul>
+        <li><strong>DNS records:</strong> MX (routing), SPF (sender policy), DKIM (signing), DMARC (policy &amp; reporting)</li>
+        <li><strong>Protocols/deliverability:</strong> SMTP/IMAP; awareness of spam filtering and alignment</li>
+        <li><strong>Platforms considered:</strong> Google Workspace (~€6/user/mo), Zoho (~€3/user/mo; Lite ~€1.2), Self-host Mailcow on VPS (~€4/mo infra)</li>
+        <li><strong>Method:</strong> cost–benefit model, feature matrix, risk/maintenance analysis, documentation standards</li>
+      </ul>
+      <div class="table-wrap" role="region" aria-label="Provider comparison table">
+        <table>
+          <thead>
+            <tr>
+              <th>Provider</th>
+              <th>Cost (3 users)</th>
+              <th>Storage</th>
+              <th>Spam protection</th>
+              <th>Setup difficulty</th>
+              <th>Maintenance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google Workspace</td>
+              <td>≈ €18/mo</td>
+              <td>30 GB / user</td>
+              <td>Strong</td>
+              <td>Easy</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Zoho Mail</td>
+              <td>≈ €9/mo<br><small>(Lite ≈ €3.6/mo)</small></td>
+              <td>50 GB / user</td>
+              <td>Basic → Good</td>
+              <td>Easy</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Self-host (Mailcow on VPS)</td>
+              <td>≈ €4/mo infra</td>
+              <td>Depends on VPS</td>
+              <td>Config-dependent</td>
+              <td>Hard</td>
+              <td>High</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="responsibilities" class="container section card">
+      <h2>Responsibilities, Reporting Line &amp; Cross-functional Collaboration</h2>
+      <ul>
+        <li><strong>Reporting line:</strong> tutor/supervisor <em>Léo Brevieres</em> (verify exact spelling &amp; title).</li>
+        <li><strong>Responsibilities:</strong> lead benchmarking, draft recommendations, execute DNS updates after validation, create mailboxes.</li>
+        <li><strong>Collaboration:</strong> quick reviews with management/ops; validation workflow for provider choice and DNS records.</li>
+        <li><strong>Approval process:</strong> proposal reviewed, then incremental DNS changes deployed and verified.</li>
+      </ul>
+    </section>
+
+    <section id="team" class="container section card">
+      <h2>Team Organization &amp; Communication</h2>
+      <ul>
+        <li><strong>Cadence:</strong> weekly checkpoints.</li>
+        <li><strong>Channels:</strong> Email, Google Meet, Discord.</li>
+        <li><strong>Examples:</strong> review of SPF/DKIM alignment; feedback loop on mailbox naming and access policies.</li>
+      </ul>
+    </section>
+
+    <section id="curiosity" class="container section card">
+      <h2>Curiosity, Creativity &amp; Autonomy</h2>
+      <ul>
+        <li><strong>Curiosity:</strong> explored deliverability nuances (SPF alignment, DKIM keys, DMARC policy).</li>
+        <li><strong>Creativity:</strong> proposed a cost–reliability model and a future-proof “what’s next” roadmap.</li>
+        <li><strong>Autonomy:</strong> produced a decision-ready proposal and executed DNS updates with validation.</li>
+      </ul>
+    </section>
+
+    <section id="assessment" class="container section card">
+      <h2>Personal Assessment</h2>
+      <p><strong>Learning in ~10 days:</strong> practical DNS configuration, clearer understanding of deliverability, and improved technical writing.</p>
+      <p><strong>Difficulty &amp; growth:</strong> Evaluating spam-filtering differences between providers; addressed by reading technical docs, checking community guidance, and validating assumptions with my tutor — showing analytical rigor and a need to deepen practical testing.</p>
+      <ul class="chips">
+        <li>DNS Management</li>
+        <li>Deliverability</li>
+        <li>Cost/Benefit Analysis</li>
+        <li>Documentation</li>
+        <li>Communication</li>
+        <li>Time Management</li>
+      </ul>
+    </section>
+
+    <section id="conclusion" class="container section card">
+      <h2>Conclusion (Impact on my professional project)</h2>
+      <p>This internship confirms my interest in infrastructure, DevOps, and cybersecurity. Next steps include DMARC monitoring, admin MFA, phishing awareness, and scaling mailbox policies. This internship strengthened CGC’s reliability while accelerating my growth in infrastructure and security.</p>
+    </section>
+
+    <section id="timeline" class="container section card">
+      <h2>Timeline</h2>
+      <ol class="timeline">
+        <li><time datetime="2025-08-11">Aug 11</time> — Onboarding &amp; scope</li>
+        <li><time datetime="2025-08-13">Aug 13–15</time> — Provider benchmarking &amp; cost model</li>
+        <li><time datetime="2025-08-16">Aug 16–18</time> — DNS plan &amp; records</li>
+        <li><time datetime="2025-08-19">Aug 19–20</time> — Mailbox creation &amp; tests</li>
+        <li><time>Next</time> — DMARC monitoring, MFA, awareness</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>Prepared by <strong>Corentin Bedo</strong> — Computer Science Student (Bachelor 2), Ynov Toulouse</p>
+      <div class="footer-actions">
+        <button id="printBtnFooter" class="btn">Print / Export PDF</button>
+        <a class="btn ghost" href="#hero">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
